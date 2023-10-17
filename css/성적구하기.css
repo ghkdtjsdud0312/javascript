@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 800px;
+}
+.score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 300px;
+    color: darkorchid;
+    font-size: 100px;
+    font-weight: bold;
+    border: 1px solid pink;
+    border-style: dashed;
+    border-color: violet;
+    background-color: pink;
+    border-radius: 100px;
+}

@@ -7,6 +7,20 @@
 // let : 변수 선언 문법, 자바의 변수의 형태와 동일, 중복 선언 불가, 재할당 가능,ES6에서 추가
 // const: 상수 선언, 재할당 불가, ES6에서 추가 
 
-console.log(sum(10,20));
+// 문자열("",'',``)
+let str = "문자열" + '연결 연산자 사용' + `이것도 사용 가능`;
+console.log(str);
 
+// let name = "제 이름은 '곰돌이사육사'입니다.";
+// let name2 = "제 이름은 \"곰돌이사육사\"입니다.";
+// console.log(name);
+// console.log(name2);
 
+let name = "곰돌이사육사";
+let age = 23;
+let addr = "경기도 수원시";
+
+// 템플릿 문자열 : ``(백틱)을 사용해서 만드며, ES6에서 추가 됨
+console.log(`저의 이름은 ${name}, 나이는 ${age}, 주소는 ${addr}`);
+
+// 
