@@ -12,6 +12,10 @@ b= Number(tmp)
 tmp=prompt("세번째 수 입력 : ","");
 c=Number(tmp);
 
+// let a = Number(prompt("첫 번째 수 입력 : ",""));
+// let b = Number(prompt("두 번째 수 입력 : ",""));
+// let c = Number(prompt("세 번째 수 입력 : ",""));
+
 if(a>b) {
    if(a > c) max = a;
    else max = c;
