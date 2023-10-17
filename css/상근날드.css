@@ -1,0 +1,19 @@
+ *{
+    box-sizing: border-box;
+}
+.menu{
+    width: 400px;
+    height:300px;
+    border: 1px solid lightskyblue;
+    background-color: lightskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.menu p {
+    font-size: 100px;
+    font-weight: bold;
+    color : blue;
+} 
+
