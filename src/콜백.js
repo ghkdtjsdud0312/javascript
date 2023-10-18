@@ -37,3 +37,16 @@ function pay(n) {
     console.log("지불할 금액은 :  " + n + "입니다.");
 }
 buyTobe("맥북에어(스타라이트)", 1300000,2,pay); 
+
+// 클로저 : 함수가 해당 함수의 스코프 외부에 있는 변수를 접근 할 수 있는 매커니즘
+function makeCounter() {
+    let count = 100;
+    return function() {
+        count++;
+        console.log(count);
+    }
+}
+const counter = makeCounter();
+counter();
+counter();
+counter();
