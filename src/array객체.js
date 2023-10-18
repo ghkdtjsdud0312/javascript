@@ -47,3 +47,40 @@ let citrus2 = fruits10.slice(1,3); // [Orange, Lemon]
 console.log(citrus);
 console.log(citrus2);
 
+// sort() : 배열에 문자형 데이터가 있는 경우 오름차순으로 정렬함
+let fruits30 = ["Banana", "Orange", "Apple", "Mango"];
+fruits30.sort(); 
+console.log(fruits30);
+fruits30.reverse();
+console.log(fruits30);
+
+// filter() : 배열에서 특정 조건을 만족하는 배열의 요소만 찾아서 새로운 배열을 반환
+let persons = [
+    {
+      name: "유재석",
+      point: 78,
+      city: "서울",
+    },
+    {
+      name: "김종국",
+      point: 92,
+      city: "서울",
+    },
+    {
+      name: "양세찬",
+      point: 76,
+      city: "제주",
+    },
+    {
+      name: "하하",
+      point: 81,
+      city: "서울",
+    },
+  ];
+
+  const pass = persons.filter(person => person.point > 80);
+  console.log(pass);
+
+  const local = persons.filter(person => person.city === "제주");
+  console.log(local);
+
