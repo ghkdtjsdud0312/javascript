@@ -45,3 +45,13 @@ console.log(carInfo);
 // 객체리터럴 동적으로 삭제하기(실행 중에 바뀌는 것)
 delete carInfo.year;
 console.log(carInfo);
+
+// 객체 메소드 : 객체 내부에서 동작하는 함수, 즉, 프로퍼티에 저장된 값의 타입이 함수를 의미
+const person3 = {
+    name: 'John',
+    age: 30,
+    sayHello: function() {
+      console.log(`Hello, my name is ${this.name}.`);
+    }
+  };
+  person3.sayHello(); // 출력: 'Hello, my name is John.'

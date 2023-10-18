@@ -17,13 +17,13 @@ gugudan(5); // ()해놔야 매개변수 넣을 수 있음
 gugudan(9);
 
 // 화살표 함수(=>) : ES6에서 추가된 새로운 함수 선언 방법, 함수 선언식보다 간결하고 가독성이 좋아 많이 사용 됨
-const gugudan = (dan) => {
+const gugudan2 = (dan) => {
     for(let i = 1; i < 10; i++) {
         console.log(`${dan} * ${i} = ${dan * i}`);
     }
 }
-gugudan(5); // ()해놔야 매개변수 넣을 수 있음
-gugudan(9);
+gugudan2(5); // ()해놔야 매개변수 넣을 수 있음
+gugudan2(9);
 
 // 기본값 할당 
 const sum = (num1, num2 = 100) => {
@@ -46,12 +46,12 @@ sum();
 console.log(`함수 외부 : ${a}`);
 
 
-// function sum() {
-    let a = 10; // 지역 스코프이자 블록 스코프
-    console.log(`함수 내부 : ${a}`);
+function sum() {
+    let a2 = 10; // 지역 스코프이자 블록 스코프
+    console.log(`함수 내부 : ${a2}`);
 }
 sum();
-console.log(`함수 외부 : ${a}`);
+console.log(`함수 외부 : ${a2}`);
 
 // 함수 맨 최상단 위까지 끌어올려짐 (호이스팅 되서) -> 안 쓰는게 좋음
 function sum() {
@@ -60,33 +60,33 @@ function sum() {
 }
 sum();
 
-var a = 10;
+var a3 = 10;
 {
     let b = 20; // 오류가 나는 이유 : let은 지역 스코프만 생성함
-    console.log(`코드 블럭 내부 a : ${a}`);
+    console.log(`코드 블럭 내부 a : ${a3}`);
     console.log(`코드 블럭 내부 b : ${b}`);
 }
-console.log(`코드 블럭 외부 a : ${a}`);
+console.log(`코드 블럭 외부 a : ${a3}`);
 console.log(`코드 블럭 외부 b : ${b}`);
 
 // 참조 우선순위
-let a = 10;
-const b = 20;
+let a4 = 10;
+const b4 = 20;
 function sum() {
-    let a = 50; // 지역 변수 먼저하므로 안에 것이 우선적으로 실행 됨
-    const b = 70;
-    console.log(`함수 내부 a : ${a}`);
-    console.log(`함수 내부 b : ${b}`);
+    let a4 = 50; // 지역 변수 먼저하므로 안에 것이 우선적으로 실행 됨
+    const b4 = 70;
+    console.log(`함수 내부 a : ${a4}`);
+    console.log(`함수 내부 b : ${b4}`);
 }
 sum();
 
-let a = 10;
-let b = 20;
+let a5 = 10;
+let b5 = 20;
 {
     let a = 30;
     let b = 40;
-    console.log('함수 내부 a : ${a}');
-    console.log('함수 내부 b : ${b}');
+    console.log('함수 내부 a : ${a5}');
+    console.log('함수 내부 b : ${b5}');
 }
 
 // 즉시 실행 함수 : 함수를 정의하자마자 바로 실행되는 함수
