@@ -55,3 +55,17 @@ const person3 = {
     }
   };
   person3.sayHello(); // 출력: 'Hello, my name is John.'
+
+  // 생성자로 객체 생성하기, 함수 이름이지만 객체를 생성하기 위해서 사용하기 때문에 첫자가 대문자
+  function Person(name, age, addr, job) {
+    this.name = name;
+    this.age = age;
+    this.addr = addr;
+    this.job = job;
+} 
+
+const person11 = new Person("안유진", 21, "서울시 강남구 역삼동", "아이브");
+const person22 = new Person("장원영", 20, "서울시 강남구 청담동", "아이브");
+console.log(person11);
+console.log(person22);
+
