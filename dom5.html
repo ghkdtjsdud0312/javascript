@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" name="frm">
+        <input type="text" name="id">
+        <input type="password" name="pw">
+    </form>
+
+    <form action="#">
+        <label for="apple"><input type="radio" name="fruits" id="apple" value="apple">사과</label>
+        <label for="banana"><input type="radio" name="fruits" id="banana" value="banana">바나나</label>
+        <label for="orange"><input type="radio" name="fruits" id="orange" value="orange">오렌지</label>
+        <label for="melon"><input type="radio" name="fruits" id="melon" value="melon">멜론</label>
+    </form>
+
+    <script>
+        const ckEls = document.querySelectorAll("[type='radio']");
+        for(let i = 0; i < ckEls.length; i++) {
+            if(ckEls[i].value === "orange") ckEls[i].checked = true;
+        }
+    </script> 
+</body>
+</html>

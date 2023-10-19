@@ -7,22 +7,31 @@
         #text {
             font-size: 2em;
         }
+        .active{
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .red-color {
+            color : red;
+        }
     </style>
 </head>
 <body>
         <p id="text">글자를 입력 합니다.</p>
         <div><p>내용을 입력 합니다.</p></div>
+        <a href="https://google.co.kr">구글</a>
     <script>
         // 스타일 조작하기
         const pEl = document.querySelector("#text");
-        pEl.style.backgroundColor = "#f00";
-        pEl.style.fontSize = "3em";
-        pEl.style.color = "#fff";
+        pEl.classList.add("active", "red-color");
 
-        const pEl2 = document.querySelector("div");
-        pEl2.style.color = "red";
-        pEl2.style.fontSize = "1.6em";
-        pEl2.style.backgroundColor ="royalBlue";
-    </script>
+        // 메소드 속성으로 조작하기
+        const aEl = document.querySelector("a");
+        const href = aEl.getAttribute("href"); // 속성명을 읽어 옴
+        aEl.setAttribute("href","https://kakao.com");
+        aEl.innerHTML = "카카오";
+
+        </script>
 </body>
 </html>
