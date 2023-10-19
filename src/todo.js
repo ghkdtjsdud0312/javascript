@@ -9,7 +9,7 @@ function newRegister() {
     subject.value = "";
     let items = document.querySelectorAll("li");
     for (i = 0; i < items.length; i++) {
-        items[i].addEventListener("click", function() {
+        items[i].addEventListener("click", function() { // 화살표 함수는 안 먹음
             if(this.parentNode) { // 부모 노드가 있다면
                 this.parentNode.removeChild(this); // 부모 노드에서 삭제
             }
