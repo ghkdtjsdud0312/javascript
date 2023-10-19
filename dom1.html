@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #title {
+            font-size: 1.5em;
+            color : darkgreen;
+        }
+        .text {
+            font-size: 1.3em;
+            color : darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">title</h1>
+    <p class="text">text-1</p>
+    <p class="text">text-2</p>
+    <script>
+        // id 속성값으로 요소 선택
+        const title = document.getElementById("title");
+        console.log(title);
+        // class 속성값으로 요소 선택(유사배열 형태로 담겨서 옴)
+        const textEl = document.getElementsByClassName("text"); // 유사 배열
+        console.log(textEl);
+        for(let e of textEl) console.log(e);
+        // 태그에 해당하는 요소 노드 선택
+        const tagEl = document.getElementsByTagName("p");
+        console.log(tagEl);
+        for(let e of tagEl) console.log(e);
+        
+    </script>
+</body>
+</html>

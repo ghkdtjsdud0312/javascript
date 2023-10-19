@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #text {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+        <p id="text">글자를 입력 합니다.</p>
+        <div><p>내용을 입력 합니다.</p></div>
+    <script>
+        // 스타일 조작하기
+        const pEl = document.querySelector("#text");
+        pEl.style.backgroundColor = "#f00";
+        pEl.style.fontSize = "3em";
+        pEl.style.color = "#fff";
+
+        const pEl2 = document.querySelector("div");
+        pEl2.style.color = "red";
+        pEl2.style.fontSize = "1.6em";
+        pEl2.style.backgroundColor ="royalBlue";
+    </script>
+</body>
+</html>
