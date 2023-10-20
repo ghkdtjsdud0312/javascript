@@ -4,45 +4,62 @@
     <meta charset="UTF-8">
     <title>자바스크립트 이벤트</title>
     <style>
-        a:link, a:visited {
-            color: white;
-            text-decoration: none;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-        ul {
-            list-style: none;
-            width: 500px;
+        #container {
+            display: flex;
+            width: 100vw;
             margin: 10px auto;
         }
-        li {
-            display: inline-block;
-            border: 1px solid black;
-            text-align: center;
-            font-size: 16px;
-            padding: 10px 15px;
-            width: 120px;
+        .btn {
+            margin: 2px;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            border: 1px solid #ccc;
+            color:white;
+            padding: 10px 16px;
+            border-radius: 2px;
         }
         .green {
             background-color: green;
-            color: white;
-            font-weight: bold;
         }
         .orange {
             background-color: orange;
-            color: white;
-            font-weight: bold;
         }
         .purple {
             background-color: purple;
-            color: white;
-            font-weight: bold;
+        }
+        #color-box {
+            width: 850px;
+            height: 300px;
+            border: 1px solid black;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-  <ul>
-    <li class="green"><a href="#" onclick="alert('버튼을 클릭했습니다.')">Green</a></li>
-    <li class="orange"><a href="#" onclick="alert('버튼을 클릭했습니다.')">Orange</a></li>
-    <li class="purple"><a href="#" onclick="alert('버튼을 클릭했습니다.')">Purple</a></li>
-  </ul>
+    <div id="container">
+        <div class="btn green" onclick="changeBG('green')">Green</a></div>
+        <div class="btn orange" onclick="changeBG('orange')">Orange</a></div>
+        <div class="btn purple" onclick="changeBG('purple')">Purple</a></div>
+    </div>
+    <div id="color-box"></div>
+    <script>
+        const btns = document.querySelectorAll(".btn");
+        for(let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click",function() {
+                alert(`${this.textContent} 버튼이 눌러졌습니다.`);
+            })
+        }
+
+        function changeBG(color) {
+            const rst = document.querySelector('#color-box');
+            rst.style.backgroundColor = color;
+        }
+    </script>
 </body>
 </html>
