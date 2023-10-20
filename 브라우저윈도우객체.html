@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button class="btn1" onclick="sTo()">scrollTo(100, 200)</button>
+        <button class="btn2" onclick="sBy()">scrollBy(100, 200)</button>
+      </div>
+      <script>
+        function sTo(){
+                window.scrollTo(100, 200);
+          // window.scrollTo({left:100, top:200});
+        }
+        function sBy(){
+                window.scrollBy(100, 200);
+          // window.scrollBy({left:100, top:200});
+        }
+      </script>
+</body>
+</html>
