@@ -15,3 +15,16 @@ console.log(even);
 // 입력 받은 값을 하나씩 소모하면서 더해 나가는 것 
 const sum = numbers.reduce((total, e) => total + e, 0);
 console.log(sum);
+
+// 전개 연산자
+const obj1 = {x:1, y:2}
+const obj2 = {z:3, w:4}
+
+const obj3 = {...obj1, ...obj2};
+
+console.log(obj3);
+
+function sum1(...numbers) {
+    return numbers.reduce((tot,e) => tot + e, 0);
+}
+console.log(sum1(1,2,3,4,5,6,7,8,9));
