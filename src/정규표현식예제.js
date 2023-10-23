@@ -1,21 +1,21 @@
 let isIdValid = false;
 let isPwValid = false;
-let isMailValid = false;
+let isEmailValid = false;
 let isPhoneValid = false;
 
 const regexId = /^\w{8,20}$/;
 const regexPw = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/;
-const regexMail = /^([a-z]+\d*)+(\.?\w+)+@\w+(\.\w{2,3})+$/;
+const regexEmail = /^([a-z]+\d*)+(\.?\w+)+@\w+(\.\w{2,3})+$/;
 const regexTel = /^\d{2,3}-\d{3,4}-\d{4}$/;
 
 let idBtn = document.querySelector("#id_confirm");
 let pwBtn = document.querySelector("#pw_confirm");
-let mailBtn = document.querySelector("#mail_confirm");
+let emailBtn = document.querySelector("#email_confirm");
 let telBtn = document.querySelector("#phone_confirm");
 
 let idCheck = document.querySelector(".id_input_check");
 let pwCheck = document.querySelector(".pw_input_check");
-let mailCheck = document.querySelector(".email_input_check");
+let emailCheck = document.querySelector(".email_input_check");
 let telCheck = document.querySelector(".phone_input_check");
 
 idBtn.addEventListener("click", function(e) {
@@ -30,8 +30,8 @@ pwBtn.addEventListener("click", function(e) {
 });
 mailBtn.addEventListener("click", function(e) {
     e.preventDefault();
-    const val = document.getElementById("mail_txt").value;
-    checkInput(val,"mail");
+    const val = document.getElementById("email_txt").value;
+    checkInput(val,"email");
 });
 telBtn.addEventListener("click", function(e) {
     e.preventDefault();
@@ -65,13 +65,13 @@ function checkInput(val, type) {
             }
             break;
 
-        case "mail" :
-            if(regexmail.test(val)) {
-                ismailValid = true;
-                displayPhrase(mailCheck, true);
+        case "email" :
+            if(regexEmail.test(val)) {
+                isEmailValid = true;
+                displayPhrase(emailCheck, true);
             }else {
-                ismailValid = false;
-                displayPhrase(mailCheck, false);
+                isEmailValid = false;
+                displayPhrase(emailCheck, false);
             }
             break;
 
@@ -85,7 +85,7 @@ function checkInput(val, type) {
                 }
                 break;
     }
-    if (isIdValid && isPwValid && isMailValid && isPhoneValid) {
+    if (isIdValid && isPwValid && isEmailValid && isPhoneValid) {
         let regRegBtn = document.querySelector(".reg_req_btn");
         regRegBtn .style.background = "blue";
     }
