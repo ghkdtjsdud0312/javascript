@@ -1,0 +1,50 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "리액트",
+      "author": "패이스북",
+      "id": 2
+    },
+    {
+      "title": "리액트",
+      "author": "패이스북",
+      "id": 3
+    },
+    {
+      "title": "리액트",
+      "author": "패이스북",
+      "id": 4
+    },
+    {
+      "title": "리액트",
+      "author": "패이스북",
+      "id": 5
+    },
+    {
+      "title": "리액트",
+      "author": "패이스북",
+      "id": 6
+    },
+    {
+      "title": "리액트",
+      "author": "패이스북",
+      "addr": "t서울시 강남구 역삼동",
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
